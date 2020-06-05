@@ -1,0 +1,8 @@
+% docker
+# delete all running and stopped containers
+docker rm -f $(docker ps -aq)
+
+
+$ image_id: docker images --- --headers 1 --column 3
+$ container_id: docker ps --- --headers 1 --column 1
+

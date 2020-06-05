@@ -1,0 +1,10 @@
+% nixos, nixpkgs, nix
+
+# check if nixpkgs is available, find path of nixpkgs
+nix-instantiate --find-file nixpkgs
+
+# build file with function header using callPackage
+nix-build -E 'with import <nixpkgs> {};pkgs.callPackage ./<nixfile> {}'  --keep-failed
+
+$ nixfile: ls -a | grep -e "\(.nix$\)" ---
+$ nixpkgs: echo "<nixpkgs>"
